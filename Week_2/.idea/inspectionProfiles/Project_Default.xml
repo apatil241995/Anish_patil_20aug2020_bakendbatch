@@ -1,0 +1,35 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+          <option value="N801" />
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredNames">
+        <list>
+          <option value="id" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="order_menu.models.OrderMenu.objects" />
+          <option value="order_menu.models.Category.objects" />
+          <option value="customer.models.customer_login.objects" />
+          <option value="customer.models.Orderedfood.objects" />
+          <option value="customer.models.Cart.objects" />
+          <option value="customer.models.customer_table.objects" />
+          <option value="restaurant.models.OrderDetailList.objects" />
+          <option value="Digikull_com.models.UrlsTable.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

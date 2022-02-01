@@ -8,3 +8,4 @@ class UrlsTable(models.Model):
     main_url = models.CharField(max_length=1000)
     description = models.CharField(max_length=200)
     uuid = models.CharField(max_length= 10, null=True)
+    title = models.CharField(max_length=100, null=True)

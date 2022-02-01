@@ -7,6 +7,11 @@ from django.contrib.auth import authenticate, login, logout
 
 
 @csrf_exempt
+def Register(request):
+    return render(request, "singin.html")
+
+
+@csrf_exempt
 def singup(request):
     username = request.POST['username']
     email = request.POST['email']
@@ -28,6 +33,7 @@ def singup(request):
                 password=pass1,
             )
             user.save()
+
         return HttpResponseRedirect('http://127.0.0.1:8000/home/v1/customer/v1/c_login_page/')
     return HttpResponseRedirect('Passwords are not matching..', status=400)
 
@@ -38,9 +44,9 @@ def login(request):
         username = request.POST['username']
         password = request.POST['password']
 
-        user = authenticate(username=username,password=password)
+        user = authenticate(username=username, password=password)
         if user is not None:
-            login(request,user)
+            login(request, user)
             messages.success(request, "Successfully login")
             return redirect('home')
         else:
@@ -55,6 +61,7 @@ def logout(request):
         logout(request)
         messages.success(request, "Successfully loged out")
     return redirect('home')
+
 
 def add():
     pass
