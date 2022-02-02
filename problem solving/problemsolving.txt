@@ -77,3 +77,30 @@ if sz>0:
 else:
      print('byee')
 print(b)
+
+week_2
+
+1 
+
+class Solution(object):
+    def checkPalindromeFormation(self, a, b):
+        la = len(a)
+        lb = len(b)
+        if la == lb == 1:
+            s1 = "" + b
+            s2 = "" + a
+            if s1 == s1[::-1] or s2 == s2[::-1]:
+                return True
+            else:
+                return False
+        if la == lb:
+            i = 0
+            while i<la:
+                s1 = a[:i] + b[i:]
+                s2 = b[:i] + a[i:]
+                if s1 == s1[::-1] or s2 == s2[::-1]:
+                    return True
+                i += 1
+            return False
+        else:
+            return False
