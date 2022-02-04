@@ -104,3 +104,16 @@ class Solution(object):
             return False
         else:
             return False
+
+1624. Largest Substring Between Two Equal Characters
+class Solution(object):
+    def maxLengthBetweenEqualCharacters(self, s):
+        n = len(s)
+        res = -1
+        diff = -1
+        for i in range(n - 1):
+            for j in range(n - 1, i, -1):
+                if (s[i] == s[j]):
+                    diff = j - i - 1
+                    res = max(diff, res)
+        return res
