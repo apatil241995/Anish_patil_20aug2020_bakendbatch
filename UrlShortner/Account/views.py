@@ -65,3 +65,30 @@ def logout(request):
 
 def add():
     pass
+
+
+# Python3 program to implement
+# the above approach
+
+# Function to find the longest
+# substring between pair of
+# repetitions of the same character
+def longestbetweenequalcharacters(S):
+    n = len(S)
+    res = -1
+    diff = -1
+    for i in range(n - 1):
+        for j in range(n - 1, i, -1):
+            if (S[i] == S[j]):
+                diff = j - i - 1
+                res = max(diff, res)
+    return res
+
+
+# Driver Code
+if __name__ == '__main__':
+    s = "accabbacc"
+
+    print(longestbetweenequalcharacters(s))
+
+# This code is contributed by doreamon_
